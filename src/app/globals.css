@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #020617;
+  --foreground: #f8fafc;
+
+  /* Clerk v5 High Contrast Dark Mode Overrides */
+  --clerk-color-foreground: #ffffff;
+  --clerk-color-muted-foreground: #cbd5e1;
+  --clerk-color-background: #090d16;
+  --clerk-color-primary: #22d3ee;
+  --clerk-color-input-background: #131927;
+  --clerk-color-input-text: #ffffff;
 }
 
 @theme inline {
@@ -23,4 +32,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Clerk v5 High-Contrast CSS Overrides */
+.clerk-header-title {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+.clerk-header-subtitle {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+
+.clerk-social-button-text {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.clerk-divider-text {
+  color: #cbd5e1 !important;
+  font-weight: 700 !important;
+}
+
+.clerk-label {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.clerk-footer-text {
+  color: #cbd5e1 !important;
+  font-weight: 600 !important;
 }

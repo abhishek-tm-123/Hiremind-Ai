@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model InterviewSession {
+  id                 String   @id @default(uuid())
+  userId             String
+  role               String
+  resumeName         String
+  matchPercentage    Int
+  difficulty         String
+  createdAt          DateTime @default(now())
+  
+  resumeText         String?
+  jobDescriptionText String?
+  matchAnalysis      String // JSON serialized MatchAnalysis
+  metadata           String // JSON serialized InterviewMetadata
+  questions          String // JSON serialized InterviewQuestion[]
+  answers            String // JSON serialized Record<string, string>
+  evaluations        String // JSON serialized AnswerEvaluation[]
+  finalReport        String? // JSON serialized FinalReport
+}
